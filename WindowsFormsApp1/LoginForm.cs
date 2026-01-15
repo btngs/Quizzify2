@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Desktop;
 using Microsoft.Data.SqlClient;
 
 namespace WindowsFormsApp1
@@ -31,9 +32,7 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Quizify_DB;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = Koneksi.GetConn())
             {
                 try
                 {
@@ -58,7 +57,7 @@ namespace WindowsFormsApp1
                     }
                 }
 
-                catch( Exception ex ) 
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -81,6 +80,46 @@ namespace WindowsFormsApp1
                 registerForm.Show();
                 this.Hide();
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
